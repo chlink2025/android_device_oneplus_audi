@@ -13,15 +13,48 @@
         </density>
     </densityMapping>
 
+    <!-- Global Brightness-Nit mapping -->
+    <screenBrightnessMap>
+        <point>
+            <value>0.000854597</value>
+            <nits>2.0</nits>
+        </point>
+        <point>
+            <value>0.499938</value>
+            <nits>500.0</nits>
+        </point>
+        <point>
+            <value>0.999816872</value>
+            <nits>1200.0</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>2400.0</nits>
+        </point>
+    </screenBrightnessMap>
+
     <highBrightnessMode enabled="true">
         <transitionPoint>0.85</transitionPoint>
         <minimumHdrPercentOfScreen>0.1</minimumHdrPercentOfScreen>
 
-        <minimumLux>10000</minimumLux>
+        <minimumLux>5882</minimumLux>
         <timing>
-        <timeWindowSecs>1800</timeWindowSecs>  // Window in which we restrict HBM.
-        <timeMaxSecs>300</timeMaxSecs>         // Maximum time of HBM allowed in that window.
-        <timeMinSecs>60</timeMinSecs>          // Minimum time remaining required to switch
-        </timing>                              //   HBM on for.
+        <!-- Window in which we restrict HBM. -->
+        <timeWindowSecs>1800</timeWindowSecs>
+        <!-- Maximum time of HBM allowed in that window -->
+        <timeMaxSecs>300</timeMaxSecs>
+        <!-- Minimum time remaining required to switch HBM on for -->
+        <timeMinSecs>60</timeMinSecs>
+        </timing>
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>2.0</sdrNits>
+                <hdrRatio>8.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>1200.0</sdrNits>
+                <hdrRatio>8.0</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
     </highBrightnessMode>
 </displayConfiguration>
